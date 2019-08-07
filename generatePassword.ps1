@@ -6,7 +6,17 @@
 	This cmdlet generates a random password that matches the criteria of the regular expression
 
 .PARAMETER length
-	Optional parameter which defines the length of the 
+  Optional parameter which defines the length of the random string
+  
+.EXAMPLE
+  .\generatePassword.ps1 -length 6
+    
+    This returns a random string of 6 characters have have at least one uppercase, lowercase and numeric
+
+.EXAMPLE
+  .\generatePassword.ps1
+    
+    This returns a random string of 16 characters have have at least one uppercase, lowercase and numeric
 #>
 [CmdletBinding()]
     Param(
