@@ -1,0 +1,11 @@
+# https://stackoverflow.com/questions/987142/make-gitignore-ignore-everything-except-a-few-files
+# Ignore everything
+*
+
+# Except this files
+!*.ps1
+!.gitignore
+!README.md
+
+# ...even if they are found in subdirectories
+!*/
