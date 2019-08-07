@@ -12,7 +12,7 @@
     Param(
         [Parameter(HelpMessage = "Optional value for length", Position = 1, Mandatory = $false, ValueFromPipelineByPropertyName = $true)]
         [Alias("Number")]
-        [int] $Length = 16
+        [int] $global:length = 16
     )
 function generateComplexPassword
 {
@@ -30,9 +30,11 @@ function generateComplexPassword
 
     do 
     {
-        $password = (Get-Random -Count $length -InputObject([char[]]$combined)) -join ""
+        $password = (Get-Random -Count $global:length -InputObject([char[]]$combined)) -join ""
     }
     until ($password -match $match) #Loops until string has at least one uppercase, lowercase and number
 
     return $password
 }
+
+generateComplexPassword
