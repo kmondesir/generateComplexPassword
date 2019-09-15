@@ -20,7 +20,7 @@
 #>
 [CmdletBinding()]
     Param(
-        [Parameter(HelpMessage = "Optional value for length", Position = 1, Mandatory = $false, ValueFromPipelineByPropertyName = $true)]
+        [Parameter(HelpMessage = "Optional value for length. If not value is given the default length is 16 characters", Position = 1, Mandatory = $false, ValueFromPipelineByPropertyName = $true)]
         [Alias("Number")]
         [int] $length = 16
     )
